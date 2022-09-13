@@ -1,0 +1,82 @@
+/* Header */
+header {
+    padding: 24px 250px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.header--intro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+.header__menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+/* Intro */
+.intro--container {
+    background: var(--color-grad-blue);
+}
+
+.intro {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 112px;
+}
+
+.intro .info h1 {
+    margin-bottom: 16px;
+}
+
+.intro .info .buttons {
+    margin-top: 32px;
+}
+
+.intro--pictures {
+    position: relative;
+}
+
+.intro--pictures img {
+    height: 459px;
+    width: 722px;
+}
+
+
+/* Service stuff */
+.picture__edging {
+    background-color: var(--color-blue);
+
+    position: absolute;
+    bottom: calc((-459px / 8.196428571428571) + 10px);
+    right: calc((-722px / 12.89285714285714) - 2px);
+
+    z-index: -100;
+    border-bottom-right-radius: 48px;
+    width: 250px;
+    aspect-ratio: 1;
+
+}
+
+.gradient_first {}
+
+@media screen and (max-width: 1400px) {
+    header {
+        flex-flow: row wrap;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .intro--pictures {
+        display: none;
+    }
+}
