@@ -36,6 +36,7 @@
     font-weight: 500;
     font-size: var(--fz-regular);
     color: var(--text-regular);
+    /*border: 1px solid red;*/
 }
 
 li {
@@ -76,8 +77,8 @@ button.button--simplest {
 }
 
 button.button--simple {
-    width: 185px;
-    height: 60px;
+    width: fit-content;
+    height: fit-content;
     padding: 16px 30px;
     border: 2px solid rgba(35, 46, 209, 0.4);
     border-radius: 5px;
@@ -101,7 +102,7 @@ button.button-orange {
 }
 
 .wrapper {
-    padding: 155px 250px 286px;
+    padding: 8vw 13vw 15vw;
 }
 
 .buttons {
@@ -118,8 +119,10 @@ button.button-orange {
     justify-content: center;
     align-items: flex-start;
     gap: 16px;
-    min-width: 512px;
-    min-height: 260px;
+}
+
+.subtitle {
+    color: var(--color-blue);
 }
 
 .info--features {
