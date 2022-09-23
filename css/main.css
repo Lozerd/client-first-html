@@ -2,6 +2,8 @@
     --text-regular: #5B5B5B;
     --text-black: #0D1317;
 
+    --text-simplest: #1A1A1A;
+
     --fz-regular: 18px;
     --fz-submedium: 22px;
     --fz-medium: 24px;
@@ -127,4 +129,8 @@ button.button-orange {
 
 .info--features {
     gap: 24px;
+}
+
+.pt0 {
+    padding-top: 0 !important;
 }

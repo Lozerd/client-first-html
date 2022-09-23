@@ -4,6 +4,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    gap: 20px 0;
 }
 
 .header--intro {
@@ -190,7 +191,7 @@ header {
     position: absolute;
     bottom: -141px;
     right: 0;
-    padding: 96px;
+    padding: 90px;
     width: 71%;
 
     max-width: 1360px;
@@ -220,6 +221,99 @@ header {
     max-width: 600px;
 }
 
+/* Features cards */
+.features--cards .wrapper {
+    padding-top: 0;
+}
+
+.features--cards {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12vh;
+}
+
+.features--card {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: max(5vw, 5vh);
+}
+
+.background--picture {
+    min-width: 55%;
+    padding: 5vw;
+    border-radius: 31px 31px 0 31px;
+}
+
+.background--picture img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.info--features .buttons .button--simplest {
+    color: var(--text-simplest);
+}
+
+.features--card:nth-child(2n+1) .background--picture {
+    background: var(--color-grad-blue);
+}
+
+.features--card:nth-child(2n) .background--picture {
+    background: var(--color-grad-orange);
+}
+
+.features--card:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+/* Customer reviews */
+.reviews--cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.reviews--card {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 25vw;
+    gap: 24px;
+
+    padding: 32px;
+
+    border-radius: 12px;
+    background: var(--color-grad-blue);
+}
+
+.review--info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.review--info > img {
+    width: 60px;
+    aspect-ratio: 1;
+}
+
+.review--customer {
+    font-size: var(--fz-submedium);
+    color: #000000;
+}
+
+.review--rating > img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.review--description {
+    color: var(--text-black);
+}
+
 @media screen and (max-width: 768px) {
     *,
     *::before,
@@ -227,16 +321,20 @@ header {
         font-size: var(--fz-medium) !important;
     }
 
-    .wrapper {
-        padding: 8vw 13vw 15vw;
+    header {
+        padding: 50px 150px 0;
     }
 
-    header {
-        padding: 0;
+    h1 {
+        font-size: 32px !important;
     }
 
     p {
         word-wrap: break-word;
+    }
+
+    .wrapper {
+        padding: 8vw 13vw 15vw;
     }
 
     .buttons {
@@ -268,6 +366,10 @@ header {
         width: min-content;
     }
 
+    .big_picture {
+        margin-bottom: 40px;
+    }
+
     .big_picture__info {
         position: relative;
         flex-flow: row wrap;
@@ -278,8 +380,7 @@ header {
     }
 
     .big_picture__description {
-        font-size: var(--fz-regular);
-        word-break: break-all;
+        display: none;
     }
 }
 
@@ -291,10 +392,30 @@ header {
     .features--info {
         flex-flow: row wrap;
     }
+
+    .features--card {
+        flex-wrap: wrap;
+    }
+
+    .features--card .info--features {
+        align-items: center;
+        text-align: center;
+    }
+
+    .features--card .info--features > .buttons {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 1700px) {
     .intro--pictures, .gradients {
         display: none;
+    }
+
+    .big_picture__info {
+        margin: 0 auto;
+        position: relative;
+        bottom: 0;
+        width: 100%;
     }
 }
