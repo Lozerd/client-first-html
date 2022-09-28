@@ -57,6 +57,13 @@ h1 {
     line-height: 68px;
 }
 
+h3 {
+    font-size: var(--fz-medium);
+    font-weight: 500;
+    color: #000;
+    line-height: 32px;
+}
+
 p {
     line-height: 30px;
 }

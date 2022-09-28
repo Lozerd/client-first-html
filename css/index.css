@@ -133,8 +133,6 @@ header {
     border-radius: 12px;
 
     padding: 48px 60px 32px 40px;
-    /*padding: 4.4vh 3vw 3vh 40px;*/
-    /*padding-left: 40px;*/
 
     display: flex;
     flex-flow: column wrap;
@@ -269,17 +267,27 @@ header {
 }
 
 /* Customer reviews */
+.customer--reviews .wrapper {
+    padding-bottom: 128px;
+}
+
+.customer--wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 48px;
+}
+
 .reviews--cards {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 16px;
 }
 
 .reviews--card {
     display: flex;
     flex-flow: column nowrap;
-    max-width: 25vw;
+    max-width: 23vw;
     gap: 24px;
 
     padding: 32px;
@@ -312,6 +320,54 @@ header {
 
 .review--description {
     color: var(--text-black);
+}
+
+/* FAQ */
+.faq--wrapper {
+    padding: 0 12vw;
+
+    display: flex;
+    flex-flow: column wrap;
+    gap: 100px;
+}
+
+.questions--items {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 48px;
+}
+
+.questions--item:nth-child(1) .question--number {
+    color: #0010FF;
+}
+
+.questions--item {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px;
+}
+
+.question--title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.question--number {
+    font-size: var(--fz-medium);
+    line-height: 32px;
+    max-width: 30px;
+}
+
+.question--description {
+    display: none;
+}
+
+.question--description.active {
+    display: block !important;
 }
 
 @media screen and (max-width: 768px) {
