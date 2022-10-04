@@ -57,6 +57,14 @@ h1 {
     line-height: 68px;
 }
 
+h2 {
+    font-size: var(--fz-big);
+    font-weight: 600;
+    color: #fff;
+    line-height: 51px;
+    letter-spacing: -0.03em;
+}
+
 h3 {
     font-size: var(--fz-medium);
     font-weight: 500;
@@ -80,6 +88,14 @@ button {
 a:hover {
     color: var(--color-blue);
 }
+
+/*button:hover {*/
+/*    border-color: #fff;*/
+/*    background-color: #797676 !important;*/
+/*    color: #fff;*/
+/*    transition: 0.5s ease-in;*/
+/*    cursor: pointer;*/
+/*}*/
 
 button.button--simplest {
     line-height: 27px;
@@ -107,11 +123,13 @@ button.button--blue {
 
 button.button-orange {
     background: var(--color-orange);
+    padding: 15px 55px;
     border-radius: 5px;
+    color: #fff;
 }
 
 .wrapper {
-    padding: 8vw 13vw 15vw;
+    margin: 8vw 13vw 15vw;
 }
 
 .buttons {

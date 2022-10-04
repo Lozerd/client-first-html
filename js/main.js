@@ -1,7 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".question--number").forEach(item => {
+    document.getElementById("anchor").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    })
+
+    document.querySelectorAll(".question--title").forEach(item => {
         item.addEventListener("click", () => {
-            item.closest(".question--description").style.display = "block";
+
+            let subitem = item.parentElement.children.item(1)
+
+            if (subitem.classList.contains("active")) {
+                item.children.item(0).classList.remove("active")
+                subitem.classList.remove("active")
+            } else {
+                item.children.item(0).classList.add("active")
+                subitem.classList.add("active")
+            }
         })
     })
 })
