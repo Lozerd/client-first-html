@@ -72,6 +72,12 @@ h3 {
     line-height: 32px;
 }
 
+h4 {
+    font-size: var(--fz-submedium);
+    color: #000;
+    line-height: 28px;
+}
+
 p {
     line-height: 30px;
 }
@@ -79,6 +85,12 @@ p {
 button {
     border: none;
     background-color: inherit;
+}
+
+input, input:focus, input:active, input:hover {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 * {

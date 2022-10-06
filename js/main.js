@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("anchor").scrollIntoView({
+
+    document.querySelectorAll("button").forEach(btn => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+        })
+    })
+
+    let anchor = document.getElementById("anchor")
+
+    anchor?.scrollIntoView({
         behavior: "smooth",
         block: "center"
     })
